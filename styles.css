@@ -1,0 +1,195 @@
+html {
+  overflow-y: scroll;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+/* FORM DISPLAY */
+
+
+
+.form-display {
+	width: 50%;
+	height: 100vh;
+	top: 0;
+	position: fixed;
+	background-image: linear-gradient(-135deg, #077766, #02463b);
+	color: white;
+}
+
+@media only screen and (max-width: 768px) {
+	.form-display {
+		width: 100%;
+		height: 80vh;
+		min-height: 60rem;
+		position: relative;
+	}
+}
+
+
+
+
+.form-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.form {
+	margin: 0 auto;
+	/* width: 35rem; */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.form__heading {
+	font-size: 2.8rem;
+	margin-bottom: 1rem;
+	font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+	.form__heading {
+		font-size: 2.4rem;
+	}
+}
+
+.form-group {
+	margin: 0 auto 1rem auto;
+	padding: 0.25rem;
+}
+
+.form-group__label {
+	display: inline-block;
+	/* font-weight: 400; */
+	font-size: 1.5rem;
+	margin-bottom: .5rem;
+}
+
+.form-group__text {
+	font-size: 1.8rem;
+	margin-bottom: .5rem;
+}
+
+
+
+
+.btn {
+	color: #077766;
+	background: white;
+	border: none;
+	border-radius: 1rem;
+	padding: 1.5rem 2rem;
+	font-size: 2rem;
+	transition: all .2s ease-in-out;
+	cursor: pointer;
+	outline: none;
+}
+
+.btn:hover {
+	transform: translateY(-.3rem);
+	box-shadow: 0 1rem 1rem rgba(0,0,0,.3);
+}
+
+.btn:active {
+	transform: translateY(-.1rem);
+	box-shadow: 0 .7rem .7rem rgba(0,0,0,.4);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+	.btn {
+		font-size: 1.6rem;
+	}
+}
+
+
+
+input {
+	display: block;
+	padding: 3rem;
+}
+input[type='checkbox'] {
+	display: inline-block;
+
+}
+
+input[type='checkbox']:checked {
+	background: yellow;
+	color: yellow;
+	
+}
+
+
+
+
+.form-control {
+	display: block;
+	width: 70%;
+	padding: .5rem 1rem;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: none;
+	font-size: 1.6rem;
+	outline: none;
+	border-radius: 0.25rem;
+	transition: all .2s ease-in-out;
+
+
+}
+
+.form-control:active, .form-control:focus {
+	box-shadow: 0 1rem 1rem rgba(0,0,0,.3);
+}
+
+
+  
+.form-group input[type='checkbox'] {
+	  text-align: right;
+}
+
+/* PIN DISPLAY */
+
+
+.code-display {
+	width: 50%;
+	min-height: 100vh;
+	margin-left: 50%;
+	text-align: left;
+	padding: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+	.code-display {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+table {
+	text-align: left;
+	margin: 0 auto;
+	font-size: 1rem;
+}
+
+.large-text {
+	font-size: 2rem;
+}

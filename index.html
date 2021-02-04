@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Characters</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+
+	<div class="form-display">
+		<div class="form-container">
+			<div class="form">
+				<h1 class="form__heading">Random Pin Generator</h1>
+				<div class="form-group">
+					<label class="form-group__label" for="stringlength">Length of String (20 max)</label>
+					<input class="form-control" type="number" name="stringlength" value="10" id="stringlength">
+				</div>
+				<div class="form-group">
+					<label class="form-group__label" for="codeCount">Number of Codes (500 max)</label>
+					<input class="form-control" type="number" name="codeCount" value="100" id="codeCount">
+				</div>
+				<div class="form-group">
+					<label class="form-group__label" for="prefix">Prefix</label>
+					<input class="form-control" type="text" name="prefix" id="prefix">
+				</div>
+				<div class="form-group">
+					<label class="form-group__label" for="suffix">Suffix</label>
+					<input class="form-control" type="text" name="suffix" id="suffix">
+				</div>
+				<div class="form-group">
+					<p class="form-group__text">Character Types:</p>
+					<div class="checkDiv">
+						<input type="checkbox" name="Characters" id="inclUp" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" checked>
+						<label class="form-group__label">Uppercase</label>
+					</div>
+					<div class="checkDiv">
+						<input type="checkbox" name="Characters" id="inclLow" value="abcdefghijklmnopqrstuvwxyz" checked>
+						<label class="form-group__label">Lowercase</label>
+					</div>
+					<div class="checkDiv">
+						<input type="checkbox" name="Characters" id="incleNum" value="0123456789"checked>
+						<label class="form-group__label">Numbers</label>					
+					</div>
+					<div class="checkDiv">
+						<input type="checkbox" name="Characters" id="incleSpecial" value="=+-_)(*&^%$#@!~`">
+						<label class="form-group__label">Special</label>
+					</div>
+				</div>
+				<button class="btn">Generate Codes</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="code-display">
+		<table>
+			<tbody class="table-container" id="tableDisplay">
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
