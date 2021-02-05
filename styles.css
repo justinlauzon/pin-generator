@@ -1,6 +1,14 @@
 html {
   overflow-y: scroll;
   font-size: 62.5%;
+
+  
+}
+
+@media only screen and (max-width: 75em) {	
+	html {
+		font-size: 56%;
+	}
 }
 
 *,
@@ -27,14 +35,13 @@ body {
 	top: 0;
 	position: fixed;
 	background-image: linear-gradient(-135deg, #077766, #02463b);
-	color: white;
+	color: #fff;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 75em) {
 	.form-display {
 		width: 100%;
-		height: 80vh;
-		min-height: 60rem;
+		min-height: 70rem;
 		position: relative;
 	}
 }
@@ -45,7 +52,7 @@ body {
 .form-container {
 	width: 100%;
 	height: 100%;
-	position: relative;
+	/* position: relative; */
 }
 
 .form {
@@ -64,9 +71,9 @@ body {
 	font-weight: 400;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 75em) {
 	.form__heading {
-		font-size: 2.4rem;
+		font-size: 3rem;
 	}
 }
 
@@ -92,14 +99,14 @@ body {
 
 .btn {
 	color: #077766;
-	background: white;
+	background: #fff;
 	border: none;
 	border-radius: 1rem;
 	padding: 1.5rem 2rem;
 	font-size: 2rem;
 	transition: all .2s ease-in-out;
 	cursor: pointer;
-	outline: none;
+	/* outline: none; */
 }
 
 .btn:hover {
@@ -110,17 +117,24 @@ body {
 .btn:active {
 	transform: translateY(-.1rem);
 	box-shadow: 0 .7rem .7rem rgba(0,0,0,.4);
+	outline: none;
 }
 
 
 
-@media only screen and (max-width: 768px) {
+
+
+@media only screen and (max-width: 75em) {
 	.btn {
-		font-size: 1.6rem;
+		font-size: 2rem;
 	}
 }
 
 
+
+.checkDiv {
+	position: relative;
+}
 
 input {
 	display: block;
@@ -128,12 +142,29 @@ input {
 }
 input[type='checkbox'] {
 	display: inline-block;
-
+	width: 1.6rem;
+	height: 1.6rem;
+	border-radius: 10rem;
+	margin-right: 1rem;
+	padding: .5rem;
+	transform: translateY(.3rem);
+	background-color: #fff;
+	-webkit-appearance: none;
+	/* outline: none; */
+	cursor: pointer;
 }
 
-input[type='checkbox']:checked {
-	background: yellow;
-	color: yellow;
+@media only screen and (max-width: 75em) {
+	input[type="checkbox"] {
+	  width: 2rem;
+	  height: 2rem;
+	}  
+  }
+
+input[type="checkbox"]:checked {
+	/* content: "X"; */
+	background-color: #0f83a0;
+	font-size: 2rem;
 	
 }
 
@@ -177,19 +208,51 @@ input[type='checkbox']:checked {
 	padding: 2rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 75em) {
 	.code-display {
 		width: 100%;
 		margin-left: 0;
+		min-height: 1rem;
 	}
 }
 
 table {
 	text-align: left;
 	margin: 0 auto;
-	font-size: 1rem;
+	font-size: 1.6rem;
 }
 
 .large-text {
 	font-size: 2rem;
+}
+
+.return-btn {
+	position: absolute;
+	/* background-color: red; */
+	top: 2rem;
+	left: 3rem;
+	z-index: 1;
+
+	
+}
+
+
+.return-btn a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 2rem;
+	
+}
+
+@media only screen and (max-width: 75em) {
+	.return-btn {
+		left: initial;
+		right: 3rem;
+		/* margin-left: 0; */
+	}
+
+	.return-btn a {
+		font-size: 2.4rem;
+		
+	}
 }

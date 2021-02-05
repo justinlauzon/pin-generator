@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Random Characters</title>
+	<title>Justin Lauzon | Pin Generator</title>
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
 
 	<div class="form-display">
+		<div class="return-btn"><a id="back-link">Return</a></div>
 		<div class="form-container">
 			<div class="form">
 				<h1 class="form__heading">Random Pin Generator</h1>
 				<div class="form-group">
-					<label class="form-group__label" for="stringlength">Length of String (20 max)</label>
+					<label class="form-group__label" for="stringlength">Length of String (30 max)</label>
 					<input class="form-control" type="number" name="stringlength" value="10" id="stringlength">
 				</div>
 				<div class="form-group">
-					<label class="form-group__label" for="codeCount">Number of Codes (500 max)</label>
+					<label class="form-group__label" for="codeCount">Number of Codes (2000 max)</label>
 					<input class="form-control" type="number" name="codeCount" value="100" id="codeCount">
 				</div>
 				<div class="form-group">
 					<label class="form-group__label" for="prefix">Prefix</label>
-					<input class="form-control" type="text" name="prefix" id="prefix">
+					<input class="form-control" type="text" name="prefix" id="prefix" maxlength="15">
 				</div>
 				<div class="form-group">
 					<label class="form-group__label" for="suffix">Suffix</label>
-					<input class="form-control" type="text" name="suffix" id="suffix">
+					<input class="form-control" type="text" name="suffix" id="suffix" maxlength="15">
 				</div>
 				<div class="form-group">
 					<p class="form-group__text">Character Types:</p>
 					<div class="checkDiv">
 						<input type="checkbox" name="Characters" id="inclUp" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ" checked>
-						<label class="form-group__label">Uppercase</label>
+						<label class="form-group__label" for="inclUp">Uppercase</label>
 					</div>
 					<div class="checkDiv">
 						<input type="checkbox" name="Characters" id="inclLow" value="abcdefghijklmnopqrstuvwxyz" checked>
-						<label class="form-group__label">Lowercase</label>
+						<label class="form-group__label" for="inclLow">Lowercase</label>
 					</div>
 					<div class="checkDiv">
 						<input type="checkbox" name="Characters" id="incleNum" value="0123456789"checked>
-						<label class="form-group__label">Numbers</label>					
+						<label class="form-group__label" for="incleNum">Numbers</label>					
 					</div>
 					<div class="checkDiv">
 						<input type="checkbox" name="Characters" id="incleSpecial" value="=+-_)(*&^%$#@!~`">
-						<label class="form-group__label">Special</label>
+						<label class="form-group__label" for="incleSpecial">Special</label>
 					</div>
 				</div>
 				<button class="btn">Generate Codes</button>
@@ -52,9 +54,7 @@
 	</div>
 
 	<div class="code-display">
-		<table>
-			<tbody class="table-container" id="tableDisplay">
-			</tbody>
+		<table class="table-container" id="tableDisplay">
 		</table>
 	</div>
 </div>
@@ -63,3 +63,11 @@
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
+
+
+
+<!-- Jan 18, 7:00am version I really need to get Git going-->
+<!-- <table>
+	<tbody class="table-container" id="tableDisplay">
+	</tbody>
+</table> -->
